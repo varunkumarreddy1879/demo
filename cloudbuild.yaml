@@ -1,6 +1,6 @@
 steps:
   - name : 'gcr.io/cloud-builders/docker'
-    args : ['build', '-t', 'us.gcr.io/demo/docker/gcpcloud:v1']
+    args : ['build', '-t', 'us.gcr.io/demo/docker/gcpcloud:v1', "."]
     id : 'Build Docker Image'
 
   - name : 'gce.io/cloud-builders/docker'
@@ -14,7 +14,6 @@ steps:
       - -c
       - |
         gcloud deploy apply --file devcluster.yaml --region=us-central1
-      
         gcloud deploy releases create 'app-release-${SHORT_SHA}' --delivery-pipeline=gkecicd-pipelines --region=us-central1 --from-k8s-manifest=./kubernetes/app.yml
 options:
   logging: CLOUD_LOGGING_ONLY
