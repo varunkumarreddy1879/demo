@@ -1,6 +1,6 @@
 steps:
   - name : 'gcr.io/cloud-builders/docker'
-    args : ['build', '-t', 'us.gcr.io/demo/docker/gcpcloud:v1', "."]
+    args : ['build', '-t', 'us.gcr.io/demo/docker/gcpcloud:v1', "./Dockerfile"]
     id : 'Build Docker Image'
 
   - name : 'gce.io/cloud-builders/docker'
