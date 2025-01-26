@@ -1,0 +1,17 @@
+appVersion: deploy.cloud.google.com/v1
+kind: DeliveryPipeline
+metadata:
+  name: gkecicd-pipelines
+description: main application piepline
+serialPipeline:
+  stages:
+    - targetId: dev
+      profiles: []
+---
+appVersion: deploy.cloud.google.com/v1
+kind: Target
+metadata:
+  name: dev
+description: dev GKE cluster
+gke:
+  clusters: projects/demo/locations/us-central1/clusters/demo-cluster-1
