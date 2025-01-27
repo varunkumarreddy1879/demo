@@ -17,6 +17,7 @@ spec:
             image: us-central1-docker.pkg.dev/modern-ellipse-449011-s1/demo-docker/dummy-image
             ports:
               - containerPort: 8080
+                name: http
 
 ---
 
