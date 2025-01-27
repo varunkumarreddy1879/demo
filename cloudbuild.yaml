@@ -3,7 +3,7 @@ steps:
     args : ['build', '-t', 'us.gcr.io/demo/docker/gcpcloud:v1', "."]
     id : 'Build Docker Image'
 
-  - name : 'gcr.io/cloud-builders/docker/impagepush'
+  - name : 'gcr.io/cloud-builders/docker'
     args : ['push', 'us.gcr.io/demo/docker/gcpcloud:v1']
     id : 'Push Docker Image'
 
