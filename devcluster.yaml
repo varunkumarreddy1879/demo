@@ -14,4 +14,4 @@ metadata:
   name: dev
 description: dev GKE cluster
 gke:
-  clusters: projects/demo/locations/us-central1/clusters/demo-cluster-1
+  cluster: projects/demo/locations/us-central1/clusters/demo-cluster-1
